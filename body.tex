@@ -1,0 +1,60 @@
+\section{Scope}
+
+This working group is to look into the butler layer. It should start immediately (August 4, 2017) and finish its remit by 29 September 2017.
+
+
+\section{Responsibilities}
+\begin{itemize}
+ \item take input from a broad range of interested parties on the butler abstraction layer
+\item Pin down t the requirements in a written document (LDM)
+\item  Rank butler requirements in terms of priority in time as well as which are nice to have features as
+opposed to "needed")
+\item define mode of work in DM to achieve implementation of butler
+\end{itemize}
+
+\section{Specific tasks}
+
+\subsection{ Draft requirements document(s)}
+If we consider this middleware requirements could be added to existing document otherwise we should have a new document to hold these (as well as having them in Magic Draw). These should also carry priorities.
+
+\subsection{Plan to go forward}
+The path forward should be identified before the Working Group finishes. This should include advice to the PM on the distribution of work among institutes (if any) and indication of individuals responsible for different components.
+
+\subsection{Specific topics to be considered}
+
+\begin{enumerate}
+\item {\bf  Operational considerations}
+The group must consider how to take care of operational constraints at NCSA.
+An initial dump of issues and constraints \url{https://docs.google.com/document/d/1BGz7Xa3_jlapWLJ405NmfvumEdd36bgLRTByk0IxbtY/edit?usp=sharing} has been made - these should be asses and categorized and answered.
+
+\item {\bf  Data access}\label{da}
+One major goal  of butler is to provide abstraction to data access - that could be with multiple implantation's.
+How do developers access local data awhile allowing condor jobs to access data on GPFS?
+
+\item {\bf  Data discovery}
+This includes  calibration logic and mappers - the distinction between simple data access (see \ref{da}) and associating data items with each other should be made clear.
+
+\item {\bf  Expansion of partial data IDs } this must be well explained and pinned down for ops.
+
+\item {\bf Third-party instrument support}  How can we make it easier for others to use the stack
+\item {\bf  Subset data staging}
+\end{enumerate}
+
+\section{Membership}
+Membership on the order of seven people is optimal.
+\begin{itemize}
+        \item[  Chair] Tim Jenness
+\item [Member] John Swinbank
+-\item [Member]  Maria and/or Colin (UW)
+-\item [Member]  Jim and/or Pim (Princeton)
+-\item [Member]  Michelle Gower
+-\item [Member]  Nate
+\item [Adviser] KT Lim
+\end{itemize}
+
+\section{Responsibilities }
+            Chair will convene meetings on a regular basis. The group will draft documents for requirements
+and design/implementation. .. start draft documents
+\section{ Reporting}
+           Chair shall report directly to  DM Project manager weekly.
+
