@@ -1,59 +1,93 @@
 \section{Scope}
 
-This working group is to look into the butler layer. It should start immediately (August 4, 2017) and finish its remit by 29 September 2017.
+This Working Group is to look into the Butler layer of the Data Management System \citedsp{LDM-148,LDM-463}.
+It should start immediately (August 4, 2017) and finish its remit by 29th September 2017.
 
 
 \section{Responsibilities}
+
+The Working Group (WG) has the following responsibilities:
+
 \begin{itemize}
- \item take input from a broad range of interested parties on the butler abstraction layer
-\item Pin down t the requirements in a written document (LDM)
-\item  Rank butler requirements in terms of priority in time as well as which are nice to have features as
-opposed to "needed")
-\item define mode of work in DM to achieve implementation of butler
-\item     Chair shall  convene meetings on a regular basis.
-\item The group will draft documents for requirements and design/implementation.
+ \item Take input from a broad range of interested parties on the butler abstraction layer, and produce a document of Use Cases.
+ \item Pin down the requirements in a written document \citep{LDM-556}.
+ \item Rank butler requirements in terms of priority in time as well as which are nice to have features as opposed to "needed").
+ \item Define mode of work in DM to achieve implementation of the Butler.
+ \item The WG Chair shall convene meetings on a regular basis.
+ \item The WG will make a recommendation as to whether a new Butler should be written, or whether the existing Butler code can be extended to meet the new requirements.
+ \item The WG will draft a document proposing a design and implementation.
 \end{itemize}
+
+\begin{draftnote}
+  I am somewhat concerned that we need a document proposing a design and implementation by the end of September.
+\end{draftnote}
 
 \section{Specific tasks}
 
-\subsection{ Draft requirements document(s)}
-If we consider this middleware requirements could be added to existing document otherwise we should have a new document to hold these (as well as having them in Magic Draw). These should also carry priorities.
+\subsection{Draft requirements document(s)}
+
+\citeds{LDM-556} defines all the middleware requirements, and is generated from the MagicDraw SysML model.
+A section exists in \citeds{LDM-556} that will be populated with Butler requirements.
+These requirements should carry priorities as used in \citeds{LSE-61}.
+
+\begin{draftnote}
+In LSE-61 we only prioritize by delivery time.
+We do not have a secondary axis to prioritize by importance.
+If we want two axes of prioritization I need to get the SysML stereotype updated.
+\end{draftnote}
 
 \subsection{Plan to go forward}
-The path forward should be identified before the Working Group finishes. This should include advice to the PM on the distribution of work among institutes (if any) and indication of individuals responsible for different components.
+
+The path forward should be identified before the Working Group finishes.
+This should include advice to the PM on the distribution of work among institutes (if any) and indication of individuals responsible for different components.
 
 \subsection{Specific topics to be considered}
 
 \begin{enumerate}
-\item {\bf  Operational considerations}
+\item \textbf{Operational considerations}
 The group must consider how to take care of operational constraints at NCSA.
-An initial dump of issues and constraints \url{https://docs.google.com/document/d/1BGz7Xa3_jlapWLJ405NmfvumEdd36bgLRTByk0IxbtY/edit?usp=sharing} has been made - these should be asses and categorized and answered.
 
-\item {\bf  Data access}\label{da}
-One major goal  of butler is to provide abstraction to data access - that could be with multiple implantation's.
-How do developers access local data awhile allowing condor jobs to access data on GPFS?
+\item \textbf{Data access}\label{da}
+One major goal of Butler is to provide abstraction to data access -- that could be with multiple implementations.
+How do developers access local data while allowing Condor jobs to access data on GPFS?
 
-\item {\bf  Data discovery}
-This includes  calibration logic and mappers - the distinction between simple data access (see \ref{da}) and associating data items with each other should be made clear.
+\item \textbf{Data format abstraction}
+How do we hide from the pipelines user whether data are stored in HDF5 or FITS, or whether associated metadata is coming from a database or from a file?
 
-\item {\bf  Expansion of partial data IDs } this must be well explained and pinned down for ops.
+\item \textbf{Data discovery}
+This includes  calibration logic and mappers -- the distinction between simple data access (see \ref{da}) and associating data items with each other should be made clear.
 
-\item {\bf Third-party instrument support}  How can we make it easier for others to use the stack
-\item {\bf  Subset data staging}
+\item \textbf{Expansion of partial data IDs} This must be well explained and pinned down for operations.
+
+\item \textbf{Third-party instrument support}  How can we make it easier for others to use the stack
+\item \textbf{Subset data staging}
 \end{enumerate}
 
 \section{Membership}
+
 Membership on the order of seven people is optimal.
+The proposed membership is:
+
 \begin{itemize}
-        \item Tim Jenness {\bf(Chair)}
-\item  John Swinbank
-\item   Maria and/or Colin (UW)
-\item   Jim and/or Pim (Princeton)
-\item   Michelle Gower
-\item   Nate Pease
+  \item Tim Jenness \textbf{(Chair)},
+  \item John Swinbank,
+  \item Maria Patterson and/or Colin Slater (UW),
+  \item Jim Bosch and/or Pim Schellart (Princeton),
+  \item Michelle Gower,
+  \item Brian van Klaveren.
 \end{itemize}
-In addition KT Lim is available as adviser.
 
-\section{ Reporting}
-           Chair shall report directly to  DM Project manager weekly.
+In addition K-T Lim is available as adviser.
 
+\begin{draftnote}
+  There is no-one here from SQuaRE or SUIT.
+  Both those groups have been strong proponents of butler requirements in the past.
+  For example, SQuaSH needs to be able to retrieve data from different runs for comparisons.
+  I feel we should also ask Dominique Boutigny whether he would like to be an external "non-voting" member.
+  They have had a lot of experience with the current butler when doing processing at IN2P3.
+\end{draftnote}
+
+
+\section{Reporting}
+
+Th WG Chair shall report directly to the DM Project manager weekly.
