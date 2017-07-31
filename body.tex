@@ -1,6 +1,6 @@
 \section{Scope}
 
-This Working Group is to look into the Butler layer of the Data Management System \citedsp{LDM-148,LDM-463}.
+This Working Group is to look into the Butler layer of the Data Management System \citedsp{LDM-148,LDM-463,LDM-152}.
 It should start immediately (August 4, 2017) and finish its remit by 29th September 2017.
 
 
@@ -42,15 +42,19 @@ One major goal of Butler is to provide abstraction to data access -- that could 
 How do developers access local data while allowing Condor jobs to access data on GPFS?
 
 \item \textbf{Data format abstraction}
-How do we hide from the pipelines user whether data are stored in HDF5 or FITS, or whether associated metadata is coming from a database or from a file?
+How do we hide from the pipelines user whether data are stored in HDF5 or FITS, or whether associated metadata is coming from a database or from a file, or whether composite datasets are coming from multiple locations?
 
 \item \textbf{Data discovery}
-This includes  calibration logic and mappers -- the distinction between simple data access (see \ref{da}) and associating data items with each other should be made clear.
+This includes calibration logic and mappers -- the distinction between simple data access (see \ref{da}) and associating data items with each other should be made clear.
 
-\item \textbf{Expansion of partial data IDs} This must be well explained and pinned down for operations.
+\item \textbf{Expansion of partial data IDs}
+This must be well explained and pinned down for operations.
 
-\item \textbf{Third-party instrument support}  How can we make it easier for others to use the stack
+\item \textbf{Third-party instrument support}
+How can we make it easier for others to use the stack and for LSST to process precursor datasets.
+
 \item \textbf{Subset data staging}
+How do we extract a subset of a dataset collection?
 \end{enumerate}
 
 \section{Membership}
@@ -75,4 +79,4 @@ In addition K-T Lim is available as adviser.
 
 \section{Reporting}
 
-Th WG Chair shall report directly to the DM Project manager weekly.
+The WG Chair shall report directly to the DM Project manager weekly.
